@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.java</groupId>
-	<artifactId>s0210_02</artifactId>
+	<artifactId>s0211</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>s0210_02</name>
+	<name>s0211</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>
@@ -68,12 +68,12 @@
 			<scope>test</scope>
 		</dependency>
 		
-		<!-- 1. JSP 템플릿 엔진 -->
+		<!-- 1. Jsp 템플릿 엔진 -->
 		<dependency>
 			<groupId>org.apache.tomcat.embed</groupId>
 			<artifactId>tomcat-embed-jasper</artifactId>
 		</dependency>
-
+		
 		<!-- 2. JSTL 사용 -->
 		<dependency>
 			<groupId>jakarta.servlet.jsp.jstl</groupId>
@@ -102,7 +102,6 @@
 			<artifactId>log4jdbc-log4j2-jdbc4.1</artifactId>
 			<version>1.16</version>
 		</dependency>
-		
 		
 	</dependencies>
 
