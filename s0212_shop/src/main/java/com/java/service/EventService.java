@@ -16,5 +16,7 @@ public interface EventService {
 	
 	// 하단댓글 저장
 	CboardDto cwrite(CboardDto cdto);
+	// 하단 댓글 수정
+	CboardDto cupdate(CboardDto cdto);
 
 }

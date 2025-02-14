@@ -14,26 +14,31 @@ import com.java.dto.BoardDto;
 public class CustomerServiceImpl implements CustomerService {
 
 	@Autowired CustomerMapper customerMapper;
-
-	@Override // 게시글 전체보기
+	
+	@Override
 	public ArrayList<BoardDto> notice() {
 		ArrayList<BoardDto> list = customerMapper.selectAll();
 		return list;
 	}
 
-	@Override // 게시글 상세보기
-	public Map<String, Object> nview(int bno) {
+	@Override
+	public BoardDto nview(int bno) {
+		//
 		Map<String, Object> map = new HashMap<>();
+		//조회수 1 증가 - update
 		customerMapper.updateBhit(bno);
+		//현재게시글 정보
 		BoardDto boardDto = customerMapper.selectOne(bno);
+		//이전게시글 정보
 		BoardDto prevDto = customerMapper.selectOnePrev(bno);
+		//다음게시글 정보
 		BoardDto nextDto = customerMapper.selectOneNext(bno);
-		map.put("boardDto",boardDto);
-		map.put("prevDto",prevDto);
-		map.put("nextDto",nextDto);
-		return map;
+		
+		map.put("boardDto", boardDto);
+		map.put("prevDto", prevDto);
+		map.put("nextDto", nextDto);
+		
+		return boardDto;
 	}
-	
-
 
 }

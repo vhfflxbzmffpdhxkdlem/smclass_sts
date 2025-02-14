@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -223,7 +223,7 @@ $(document).ready(function() {
 							</div>
 							<div class="day">
 								<p class="txt">작성일<span>
-								<fmt:formatDate value="${bdto.bdate }" pattern="yyyy-MM-dd"/>
+								<fmt:formatDate value="${bdto.bdate}" pattern="yyyy-MM-dd"/>
 								</span></p>
 							</div>
 						</div>
@@ -231,12 +231,11 @@ $(document).ready(function() {
 						<div class="viewContents">
 							${bdto.bcontent }
 						</div>
-						<c:if test="${bdto.bfile != null }">
-							<div class="viewContents">
-								<img src="/upload/board/${bdto.bfile }" width="50%"/>
+						<c:if test="${bdto.bfile !=null }">
+							<div>
+								<img src="/upload/board/${bdto.bfile}" width="50%"/>
 							</div>
 						</c:if>
-						
 					</div>
 
 
@@ -251,22 +250,12 @@ $(document).ready(function() {
 							<tbody>
 								<tr>
 									<th class="pre">PREV</th>
-									<c:if test="${pdto != null }">
-									<td><a href="/customer/nview?bno=${pdto.bno }">${pdto.btitle }</a></td>
-									</c:if>
-									<c:if test="${pdto == null }">
-									<td>이전글이 없습니다.</td>
-									</c:if>
+									<td><a href="#">상품 재입고는 언제 되나요?</a></td>
 								</tr>
 
 								<tr>
 									<th class="next">NEXT</th>
-									<c:if test="${ndto != null }">
-									<td><a href="/customer/nview?bno=${ndto.bno }">${ndto.btitle }</a></td>
-									</c:if>
-									<c:if test="${ndto == null }">
 									<td>다음 글이 없습니다.</td>
-									</c:if>
 								</tr>
 							</tbody>
 						</table>

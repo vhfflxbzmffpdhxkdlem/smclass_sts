@@ -4,11 +4,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class FController {
-	
-	@GetMapping("/")
-	public String index() {
-		return "index";
-	}
+public class JoinController {
 
+	@GetMapping("/email/join")
+	public String join() {
+		return "/email/join";
+	}
+	
 }
