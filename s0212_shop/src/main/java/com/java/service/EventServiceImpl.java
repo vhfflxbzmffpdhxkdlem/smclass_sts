@@ -22,31 +22,36 @@ public class EventServiceImpl implements EventService {
 		return list;
 	}
 
-	@Override // 이벤트 상세보기
+	@Override
 	public EventDto eview(int eno) {
 		EventDto eventDto = eventMapper.selectOne(eno);
 		return eventDto;
 	}
 
-	@Override // 하단댓글 가져오기
+	@Override //하단댓글 가져오기
 	public ArrayList<CboardDto> clist(int eno) {
 		ArrayList<CboardDto> clist = eventMapper.selectAllCboard(eno);
 		return clist;
 	}
 
-	@Override // 하단댓글 저장
+	@Override //하단댓글 저장
 	public CboardDto cwrite(CboardDto cdto) {
-		System.out.println("cwrite 저장전 : "+cdto.getCno());
 		eventMapper.insertCboard(cdto);
 		CboardDto cboardDto = eventMapper.selectOneCboard(cdto.getCno());
+		
 		return cboardDto;
 	}
 
-	@Override // 하단댓글 수정
+	@Override //하단댓글 수정
 	public CboardDto cupdate(CboardDto cdto) {
 		eventMapper.updateCboard(cdto);
 		CboardDto cboardDto = eventMapper.selectOneCboard(cdto.getCno());
 		return cboardDto;
+	}
+
+	@Override //하단댓글 삭제
+	public void cdelete(int cno) {
+		eventMapper.deleteCboard(cno);
 	}
 
 }

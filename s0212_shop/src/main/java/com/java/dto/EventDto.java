@@ -6,11 +6,13 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-@NoArgsConstructor 
+
 @Builder
 @AllArgsConstructor
+@NoArgsConstructor
 @Data
 public class EventDto {
+	
 	private int eno;
 	private String etitle;
 	private String econtent;
@@ -22,4 +24,5 @@ public class EventDto {
 	private Timestamp stdate;
 	private Timestamp enddate;
 	private int openchk;
+
 }

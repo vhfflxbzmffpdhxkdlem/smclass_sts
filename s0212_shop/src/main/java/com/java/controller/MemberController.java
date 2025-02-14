@@ -5,20 +5,18 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import com.java.dto.MemberDto;
 import com.java.service.MemberService;
 
 import jakarta.servlet.http.HttpSession;
 
-
 @Controller
 public class MemberController {
 	
 	@Autowired HttpSession session;
 	@Autowired MemberService memberService;
-
+	
 	@GetMapping("/member/logout")
 	public String logout() {
 		session.invalidate();
@@ -27,19 +25,20 @@ public class MemberController {
 	
 	@GetMapping("/member/login")
 	public String login() {
-		return "/member/login";
+		return "member/login";
 	}
 	
 	@PostMapping("/member/login")
-	public String login(MemberDto mdto,Model model) {
+	public String login(MemberDto mdto, Model model) {
+		System.out.println("controller id : "+mdto.getId());
 		MemberDto memberDto = memberService.login(mdto);
-		if(memberDto != null) {
-			session.setAttribute("sessiont_id", memberDto.getId());
+		if(memberDto!=null) {
+			session.setAttribute("session_id", memberDto.getId());
 			return "redirect:/?loginChk=1";
+		}else {
+			model.addAttribute("loginChk",0);
+			return "member/login";
 		}
-		model.addAttribute("loginChk",0);
-		return "/member/login";
 	}
-	
-	
+
 }

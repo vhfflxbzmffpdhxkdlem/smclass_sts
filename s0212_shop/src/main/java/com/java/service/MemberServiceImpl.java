@@ -11,8 +11,9 @@ public class MemberServiceImpl implements MemberService {
 
 	@Autowired MemberMapper memberMapper;
 	
-	@Override // 로그인
+	@Override
 	public MemberDto login(MemberDto mdto) {
+		System.out.println("MemberServiceImpl id : "+mdto.getId());
 		MemberDto memberDto = memberMapper.selectLogin(mdto);
 		return memberDto;
 	}
