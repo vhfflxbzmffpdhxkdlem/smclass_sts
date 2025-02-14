@@ -326,9 +326,21 @@ $(document).ready(function() {
 									error:function(){
 										alert("댓글저장 실패");
 									}
-								})
+								})//ajax
+							});// 댓글쓰기 -replyBtn
+							
+							//댓글 삭제 - 정적형태: 화면표시가 되면 추가된 html 소스에는 적용이 안됨.
+							$(".deleteBtn").click(function(){
+								
 							});
-						});
+							
+							// 댓글 삭제 - 동적형태: 추가적인 html 소으에서도 적용이 가능
+							$(document).on("click",".deleteBtn",function(){
+								
+							})
+							
+						});//jquery
+						
 					</script>
 
 					<!-- 댓글-->
