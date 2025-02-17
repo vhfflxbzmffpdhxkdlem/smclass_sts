@@ -162,13 +162,13 @@ $(document).ready(function() {
 				<ul>
 					<li><a href="event/event">EVENT</a></li>
 					<li><a href="/customer/notice">CUSTOMER</a></li>
-					<li><a href="#">COMMUNITY</a></li>
+					<li><a href="/community/epilogue">COMMUNITY</a></li>
 				</ul>
 			</div>
 			<div id="snb">
 				<ul>
 					<li><a href="/member/login">LOGIN</a></li>
-					<li><a href="/member/join">JOIN</a></li>
+					<li><a href="/member/step01">JOIN</a></li>
 					<li><a href="#">MY PAGE</a></li>
 					<li><a href="#">CART</a></li>
 				</ul>

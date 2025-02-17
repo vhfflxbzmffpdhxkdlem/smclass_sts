@@ -1,3 +1,7 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,6 +22,7 @@
 <script type="text/javascript" src="../js/jquery.easing.1.3.js"></script>
 <script type="text/javascript" src="../js/idangerous.swiper-2.1.min.js"></script>
 <script type="text/javascript" src="../js/jquery.anchor.js"></script>
+<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
 <!--[if lt IE 9]>
 <script type="text/javascript" src="../js/html5.js"></script>
 <script type="text/javascript" src="../js/respond.min.js"></script>
@@ -188,133 +193,134 @@ $(document).ready(function() {
 		<div id="location">
 			<ol>
 				<li><a href="#">HOME</a></li>
-				<li><a href="#">COMMUNITY</a></li>
-				<li class="last">사용 후기</li>
+				<li><a href="#">MEMBERSHIP</a></li>
+				<li class="last">회원가입</li>
 			</ol>
 		</div>
 		
 		<div id="outbox">		
 			<div id="left">
-				<div id="title2">COMMUNITY<span>커뮤니티</span></div>
+				<div id="title2">MEMBERSHIP<span>멤버쉽</span></div>
 				<ul>	
-					<li><a href="#" id="leftNavi1">체험단</a></li>
-					<li><a href="#" id="leftNavi2">사용 후기</a></li>
-					<li class="last"><a href="#" id="leftNavi3">ENJOY COFFEE</a></li>
+					<li><a href="#" id="leftNavi1">로그인</a></li>
+					<li><a href="#" id="leftNavi2">회원가입</a></li>
+					<li><a href="#" id="leftNavi3">아이디/<span>비밀번호 찾기</span></a></li>
+					<li><a href="#" id="leftNavi4">회원약관</a></li>
+					<li><a href="#" id="leftNavi5">개인정보<span>취급방침</span></a></li>
+					<li class="last"><a href="#" id="leftNavi6">이메일무단<span>수집거부</span></a></li>
 				</ul>			
 			</div><script type="text/javascript">initSubmenu(2,0);</script>
 
 
 			<!-- contents -->
 			<div id="contents">
-				<div id="mypage">
-					<h2><strong>사용 후기</strong><span>쟈뎅 제품을 구매하신 회원님들의 소중한 후기입니다.</span></h2>
+				<div id="member">
+					<h2><strong>회원가입</strong><span>회원으로 가입하시면 보다 더 다양한 혜택을 누리실 수 있습니다.</span></h2>
 					
-					<div class="productTab normaltab">
+					<!-- STEP -->
+					<div class="stepWrap">
+						<div class="step stepon">
+							<p class="web">STEP 01</p>
+							<p class="txt">실명확인</p>
+							<p class="ck"><img src="../images/bg/bg_step.png" alt="현재위치" /></p>
+						</div>
+
+						<div class="step">
+							<p class="web">STEP 02</p>
+							<p class="txt">약관 동의</p>
+						</div>
+
+						<div class="step">
+							<p class="web">STEP 03</p>
+							<p class="txt"><span>회원정보</span> <span>입력</span></p>
+						</div>
+
+						<div class="step">
+							<p class="web">STEP 04</p>
+							<p class="txt"><span>회원가입</span> <span>완료</span></p>
+						</div>
+					</div>
+					<!-- //STEP -->
+						
+
+					<div class="alertBox">
 						<ul>
-							<li><a href="#" class="on">포토 구매후기</a></li>
-							<li class="last"><a href="#">상품평</a></li>
-						</ul>						
+							<li>회원님의 실명확인 및 가입 여부를 확인하는 절차입니다.</li>
+							<li>회원님의 개인 정보 보호를 위해 실명확인을 실시하고 있습니다.</li>
+						</ul>
 					</div>
-
-					<div class="viewDivTab">
-						<div class="viewHead">
-							<div class="subject">
-								<ul>
-									<li class="cate">[먹어봤어요]</li>
-									<li>&nbsp;쟈뎅, 테이크아웃 카페모리 구매후기</li>
-								</ul>
-							</div>
-							<div class="day">
-								<p class="txt">제품명<span>쟈뎅, 테이크아웃 ‘카페모리’ </span></p>
-							</div>
-							<div class="data">
-								<ul>
-									<li>작성자<span>wldkjf****</span></li>
-									<li class="tnone">등록일<span>2014-03-24</span></li>
-									<li class="tnone">조회수<span>2146</span></li>
-									<li class="last">평점
-										<span>
-											<img src="../images/ico/ico_star.gif" alt="별점" />
-											<img src="../images/ico/ico_star.gif" alt="별점" />
-											<img src="../images/ico/ico_star.gif" alt="별점" />
-											<img src="../images/ico/ico_star.gif" alt="별점" />
-											<img src="../images/ico/ico_star.gif" alt="별점" />
-										</span>
-									</li>
-								</ul>
-							</div>
-						</div>
-
-						<div class="viewContents">
-							물을 많이 많이 마셔야 하는 계절입니다.<br/>
-							물도 많이 마셔야 하고 커피도 땡기고 이럴 때 워터커피가 너무 좋아요.<br/>
-							그냥 물은 안넘어가는데 워터커피 덕분엔 시원하고 촉촉한 여름을 보내고 있답니다.
-						</div>
-					</div>
-
-					<!-- 답변 -->
-					<div class="answer">
-						<div class="inbox">
-							<div class="aname">
-								<p>담당자 <span>[2014-03-04&nbsp;&nbsp;15:01:59]</span></p>
-							</div>
-
-							<div class="atxt">
-								쟈뎅 커피를 사랑해주셔서 감사합니다. 앞으로도 노력하는 쟈뎅이 되겠습니다. 감사합니다.
-								쟈뎅 커피를 사랑해주셔서 감사합니다. 앞으로도 노력하는 쟈뎅이 되겠습니다. 감사합니다.
-								쟈뎅 커피를 사랑해주셔서 감사합니다. 앞으로도 노력하는 쟈뎅이 되겠습니다. 감사합니다.
-								쟈뎅 커피를 사랑해주셔서 감사합니다. 앞으로도 노력하는 쟈뎅이 되겠습니다. 감사합니다.
-								쟈뎅 커피를 사랑해주셔서 감사합니다. 앞으로도 노력하는 쟈뎅이 되겠습니다. 감사합니다.
-								쟈뎅 커피를 사랑해주셔서 감사합니다. 앞으로도 노력하는 쟈뎅이 되겠습니다. 감사합니다.
-								쟈뎅 커피를 사랑해주셔서 감사합니다. 앞으로도 노력하는 쟈뎅이 되겠습니다. 감사합니다.
-								쟈뎅 커피를 사랑해주셔서 감사합니다. 앞으로도 노력하는 쟈뎅이 되겠습니다. 감사합니다.
-								쟈뎅 커피를 사랑해주셔서 감사합니다. 앞으로도 노력하는 쟈뎅이 되겠습니다. 감사합니다.
-								쟈뎅 커피를 사랑해주셔서 감사합니다. 앞으로도 노력하는 쟈뎅이 되겠습니다. 감사합니다.
-							</div>
-						</div>
-					</div>
-					<!-- //답변 -->
-
-
-					<!-- 이전다음글 -->
-					<div class="pnDiv web">
-						<table summary="이전다음글을 선택하여 보실 수 있습니다." class="preNext" border="1" cellspacing="0">
-							<caption>이전다음글</caption>
+					
+					<!-- 테이블 추가 -->
+					<div class="checkDivTab">
+						<table summary="분류, 구매여부, 평가, 제목, 상세 내용 순으로 상품평을 작성 하실수 있습니다." class="checkTable" border="1" cellspacing="0">
+							<caption>상품평 작성</caption>
 							<colgroup>
-							<col width="100px" />
+							<col width="25%" class="tw30" />
 							<col width="*" />
-							<col width="100px" />
 							</colgroup>
 							<tbody>
 								<tr>
-									<th class="pre">PREV</th>
-									<td><a href="#">상품 재입고는 언제 되나요?</a></td>
-									<td>&nbsp;</td>
+									<th scope="row"><span>이메일주소 입력</span></th>
+									<td>
+										<input type="text" class="wlong" name="email"/>
+									</td>
 								</tr>
-
 								<tr>
-									<th class="next">NEXT</th>
-									<td>다음 글이 없습니다.</td>
-									<td>&nbsp;</td>
+									<th scope="row"><span>인증코드</span></th>
+									<td>
+										<input type="text" class="wlong" readonly/>
+									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
-					<!-- //이전다음글 -->
 
-
-					<!-- Btn Area -->
-					<div class="btnArea">
-						<div class="bRight">
-							<ul>
-								<li><a href="#" class="nbtnbig mw">수정</a></li>
-								<li><a href="#" class="nbtnbig mw">삭제</a></li>
-								<li><a href="#" class="sbtnMini mw">목록</a></li>
-							</ul>
-						</div>
-					</div>
-					<!-- //Btn Area -->
+					<!-- //테이블 추가 -->
 					
+					<script>
+						$(function(){
+							$(".nbtnbig").click(()=>{
+								let email = $('input[name="email"]');
+								if(email.val().length<1){
+									alert("이메일을 입력하셔야 합니다.");
+									email.focus();
+									return;
+								}
+								alert("인증코드를 이메일로 발송했습니다.");
+								alert(email.val());
+								
+								//ajax 이메일 발소
+								$.ajax({
+									url:"/member/sendEmail",
+									type:"post",
+									data:{"email":email.val()},
+									success:function(data){
+										alert("성공");
+										consol.log(data);
+									},
+									error:function(){
+										alert("이메일 발송 실패");
+									}
+									
+								});//ajax
+								
+							});//emailbtn
+						});// jquery
+					</script>
+					
+					
+					<br/>
+					<!-- Btn Area -->
+					<div class="bCenter">
+						<ul>																
+							<li><a class="nbtnbig">이메일 인증코드 발송</a></li>
+							<li><a href="#" class="sbtnMini">다음으로</a></li>
+						</ul>
+					</div>
+
+					<!-- //Btn Area -->
+
+
 				</div>
 			</div>
 			<!-- //contents -->
