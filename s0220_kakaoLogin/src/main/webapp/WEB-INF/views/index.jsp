@@ -23,7 +23,7 @@
 	 <!--  <div><img src="/images/roze01.jpg"></div>-->	
 	 <h2>메인페이지</h2>
 	 <div>섹션아이디 : ${kakaoProfile_id }</div>
-	 <div>섹션이름 : ${kakaoProfile_nicname } 님 환영합니다.</div>
+	 <div>섹션이름 : ${kakaoProfile_nickname } 님 환영합니다.</div>
 	 <ul>
 		   <li><a href="/login">로그인</a></li>
 		   <li><a href="/member/logout">로그아웃</a></li>
