@@ -123,8 +123,13 @@
 			<artifactId>javax.mail-api</artifactId>
 			<version>1.6.2</version>
 		</dependency>
-		
-		
+
+
+		<dependency>
+			<groupId>com.java</groupId>
+			<artifactId>s0206</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 
 	<build>

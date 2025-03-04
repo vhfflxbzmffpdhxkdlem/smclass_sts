@@ -12,5 +12,7 @@ public interface BoardService {
 	Page<BoardDto> findAll(Pageable pageable);
 	// 상세 게시판
 	BoardDto findById(int bno);
+	// 게시글 검색
+	List<BoardDto> findByBtitleContaining(String search);
 
 }

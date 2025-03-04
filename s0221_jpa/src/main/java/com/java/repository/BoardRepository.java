@@ -16,4 +16,11 @@ public interface BoardRepository extends JpaRepository<BoardDto, Integer>{
 //	@Query(value = "select * from boarddto order by bgroup desc, bstep asc",
 //			nativeQuery = true)
 	List<BoardDto> findAll();
+	
+	// 게시판 검색
+	// select * from boarddto where btitle like '%search%'
+//	@Query(value = "select * from boarddto where btitle like %:search%",
+//			nativeQuery = true)
+//	List<BoardDto> findByBtitleOrContaining(String search);
+	List<BoardDto> findByBtitleContaining(String search);
 }

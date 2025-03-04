@@ -65,5 +65,16 @@ public class BoardController {
 		return "bview";
 	}
 	
+	// select * from boarddto where btitle = '답변';
+	// select * from boarddto where btitle like '%답변%';
+	@GetMapping("/bsearch") // 제목검색, 내용검색
+	public String bsearch(String search ,Model model) {
+		System.out.println("controller search : "+search);
+		List<BoardDto> list = boardService.findByBtitleContaining(search);
+		System.out.println("list : "+list.size());
+		model.addAttribute("list",list);
+		return "blist";
+	}
+	
 	
 }
