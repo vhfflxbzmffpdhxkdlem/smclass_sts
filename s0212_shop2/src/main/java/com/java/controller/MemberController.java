@@ -24,14 +24,14 @@ public class MemberController {
 	@Autowired HttpSession session;
 	@Autowired MemberService memberService;
 
-	// 회원전체 가져오기
-	@CrossOrigin
-	@ResponseBody //인증코드 확인
-	@GetMapping("/member/memberList")
-	public List<MemberDto> memberList() {
-		List<MemberDto> list = memberService.memberList();
-		return list;
-	}
+//	// 회원전체 가져오기
+//	@CrossOrigin
+//	@ResponseBody //인증코드 확인
+//	@GetMapping("/member/memberList")
+//	public List<MemberDto> memberList() {
+//		List<MemberDto> list = memberService.memberList();
+//		return list;
+//	}
 	
 	// 회원1명 가져오기, json 데이터로 전달을 받으면 @RequestBody 붙여야 함.
 	@CrossOrigin
